@@ -16,6 +16,13 @@ app.get('/', (req, res) => {
     res.send('<h1> API </h2>');
 })
 
+app.get('/test', (req, res) => {
+    res.status(200).json({
+        msg: 'API OK',
+        date: new Date().toISOString()
+    });
+})
+
 // Cuando tenemos una conexión
 io.on('connection', (client ) => {
     console.log('Cliente conectado', client .id);
