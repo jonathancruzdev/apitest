@@ -1,0 +1,17 @@
+header {
+    min-height: 15vh;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    min-height: 80vh;
+}
+
+footer {
+    min-height: 5vh;
+}
