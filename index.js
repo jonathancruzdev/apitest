@@ -10,7 +10,7 @@ const server = http.createServer(app);
 
 const io = new Server(server);
 
-app.use( express.static('public') )
+app.use( express.static('public') );
 app.use( cors());
 app.get('/', (req, res) => {
     res.send('<h1> API </h2>');
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 // Cuando tenemos una conexión
 io.on('connection', (client ) => {
-    console.log('Cliente conectado ', client .id);
+    console.log('Cliente conectado', client .id);
     // Si existe un error
     io.on('error', console.error);
 
@@ -37,8 +37,4 @@ io.on('connection', (client ) => {
 
 })
 
-
-
-server.listen( PORT, () =>{ console.info(`Servidor en el puerto ${PORT}`)})
-
-
+server.listen( PORT, () =>{ console.info(`Servidor en el puerto ${PORT}`)} );
